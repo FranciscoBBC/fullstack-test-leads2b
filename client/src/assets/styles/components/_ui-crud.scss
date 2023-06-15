@@ -1,0 +1,148 @@
+.ui-crud {
+  box-shadow: $box-shadow-sm;
+  margin-bottom: 10px;
+
+  .ui-crud__body {
+    height: 77vh;
+  }
+
+  .ui-crud__list {
+    border-right: 1px $border-color solid;
+    padding-right: 0;
+
+    .ui-crud__list__header {
+      top: 0;
+      z-index: 3;
+      position: sticky;
+      background: $white;
+      border-radius: $card-border-radius;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .ui-crud__list__header__tabs {
+        display: flex;
+
+        .ui-crud__list__header__tabs__tab-btn {
+          width: 100%;
+          border-radius: 0;
+          font-weight: 600;
+          padding: 0.6rem 0;
+          border-bottom: $border-color 1px solid;
+          border-right: $border-color 1px solid;
+
+          &.btn-active {
+            border-bottom: 2px rgba($primary, 0.8) solid;
+          }
+        }
+
+        .ui-crud__list__header__tabs__tab-btn:last-child {
+          border-right: 0;
+        }
+      }
+
+      .ui-crud__list__header__btn-new {
+        width: 100%;
+        color: $primary;
+        border-radius: 0;
+        padding: .5rem 0;
+        border-bottom: $border-color 1px solid;
+      }
+    }
+
+    .ui-crud__list__list-group {
+      .list-group-item {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        border-bottom: 1px $border-color solid;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darken($card-bg, 5%);
+        }
+
+        &.active {
+          background: darken($card-bg, 5%);
+          border-left: 3px $primary solid;
+          color: $body-color;
+        }
+      }
+    }
+  }
+
+  &__view {
+    padding-left: 0;
+
+    &__section {
+      border: 0;
+
+      &:first-child {
+        .ui-card__header {
+          border-top: 0;
+          border-radius: 0 $card-border-radius 0 0;
+        }
+      }
+
+      .ui-card__header {
+        top: 0;
+        color: $primary;
+        font-weight: 600;
+        border-top: 1px $border-color solid;
+        background: $white;
+        border-radius: 0;
+      }
+
+      .ui-card__footer {
+        bottom: 0;
+        background: $card-bg;
+      }
+
+      .ui-card__footer,
+      .ui-card__header {
+        z-index: 3;
+        position: sticky;
+      }
+
+      .nav-link {
+        cursor: pointer;
+        color: $body-color;
+
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .ui-crud__list,
+  .ui-crud__view {
+    height: 100%;
+  }
+
+  .ui-crud__scroll {
+    height: 100%;
+    overflow-y: auto;
+    border-radius: $card-border-radius;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #c1c2c1;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}

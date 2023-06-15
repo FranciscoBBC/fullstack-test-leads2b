@@ -1,0 +1,32 @@
+$bootstrapSizes: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 3rem
+);
+
+@each $name, $size in $bootstrapSizes {
+  .b-#{$name} {
+    bottom: #{$size} !important;
+  }
+
+  .l-#{$name} {
+    left: #{$size} !important;
+  }
+
+  .r-#{$name} {
+    right: #{$size} !important;
+  }
+
+  .t-#{$name} {
+    top: #{$size} !important;
+  }
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 5rem;
+  z-index: 1;
+}

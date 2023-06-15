@@ -1,0 +1,13 @@
+@for $i from 1 through 10 {
+  .min-h-vh-#{$i} {
+    min-height: $i * 10vh !important;
+  }
+
+  .h-vh-#{$i} {
+    height: $i * 10vh !important;
+  }
+
+  .max-h-vh-#{$i} {
+    max-height: $i * 10vh !important;
+  }
+}

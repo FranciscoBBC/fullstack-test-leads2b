@@ -1,0 +1,19 @@
+.sidebar {
+  position: fixed;
+  top: 56px;
+  width: 250px;
+  height: calc(100vh - 56px);
+  background: #fff;
+  animation: sidebarEffect 0.5s forwards;
+  animation-delay: 0.3s;
+  transform: translateX(-100%);
+}
+
+@keyframes sidebarEffect {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
